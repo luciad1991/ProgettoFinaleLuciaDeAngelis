@@ -8,13 +8,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { FormsModule } from '@angular/forms';
+import { ClientDetailsComponent } from './client-details/client-details.component';
+import { AddClientComponent } from './add-client/add-client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ClientsTableComponent
+    ClientsTableComponent,
+    ClientDetailsComponent,
+    AddClientComponent
   ],
   imports: [
     BrowserModule,
