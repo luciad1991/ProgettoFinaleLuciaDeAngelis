@@ -25,6 +25,12 @@ client: Client []= [];
 this.router.navigate(['Clients', item.id ,'detail'])
   }
 
+  removeClient(item: Client) {
+this.clientService.removeClient(item).subscribe(data => {
+this.client = this.client.filter(ele=> ele!== item);
+  })
+
+  }
   
 
 }

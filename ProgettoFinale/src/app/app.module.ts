@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { AddClientComponent } from './add-client/add-client.component';
 import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
+import { EditClientsComponent } from './edit-clients/edit-clients.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
     FooterComponent,
     ClientsTableComponent,
     ClientDetailsComponent,
-    AddClientComponent
+    AddClientComponent,
+    EditClientsComponent
   ],
   imports: [
     BrowserModule,

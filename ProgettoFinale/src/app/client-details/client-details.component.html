@@ -1,4 +1,4 @@
-<div class="card text-white bg-info my-3" style="max-width: 25rem;">
+<div class="card text-white bg-info my-3" style="max-width: 35rem;">
     <div class="card-header">{{client.nomeContatto}} {{client.cognomeContatto}}</div>
     <div class="card-body">
         <h5 class="card-title">Partita IVA: {{client.partitaIva}}</h5>
@@ -36,6 +36,7 @@
         <p class="card-text">Data Inserimento:{{client.dataInserimento}}</p>
         <p class="card-text">Data Ultimo Contatto:{{client.dataUltimoContatto}}</p>
         <p class="card-text">Fatturato Annuale:{{client.fatturatoAnnuale}}</p>
+        <button type="button" class="btn btn-dark form-control" (click)="editClient(client)">GO TO EDIT</button>
 
     </div>
 </div>

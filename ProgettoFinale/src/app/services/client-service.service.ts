@@ -23,7 +23,7 @@ export class ClientServiceService {
   getAllClients() {
     //return this.http.get<ClientData>(environment.base +'api/clienti?page=0&size=20&sort=id,ASC',{headers:this.headers})
   //}
-  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,ASC');
+  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,DESC');
 }
 
 createNewClient(client: Client) {
@@ -37,4 +37,13 @@ getClientById (id: number) {
 getTipoClient() {
   return this.http.get<string[]>(environment.base + 'api/clienti/tipicliente')
 }
+
+updateClient(client : Client) {
+  return this.http.put<Client>(environment.base + 'api/clienti/' + client.id , client)
+}
+removeClient(client: Client) {
+  return this.http.delete(environment.base + 'api/clienti/' + client.id)
+}
+
+
 }

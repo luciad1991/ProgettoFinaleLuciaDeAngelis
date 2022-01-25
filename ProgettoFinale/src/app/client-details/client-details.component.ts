@@ -19,5 +19,8 @@ export class ClientDetailsComponent implements OnInit {
       this.clientService.getClientById(data['id']).subscribe(response=> this.client = response)
     })
   }
+  editClient(client: Client) {
+    this.router.navigate(['Clients', client.id ,'edit'])
+  }
 
 }
