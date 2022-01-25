@@ -1,23 +1,97 @@
+<h2 class="m-auto">Add a new client</h2>
 <form class="my-3">
     <div class="form-group">
-        <label for="formGroupExampleInput">Name</label>
-        <input type="text" [(ngModel)]="client.nomeContatto" name="name" class="form-control" id="formGroupExampleInput"
-            placeholder="name">
+        <label for="formGroupExampleInput">Ragione Sociale</label>
+        <input type="text" [(ngModel)]="client.ragioneSociale" name="ragioneSociale" class="form-control"
+            id="formGroupExampleInput" placeholder="name">
     </div>
     <div class="form-group">
-        <label for="formGroupExampleInput2">Lastname</label>
-        <input type="text" [(ngModel)]="client.cognomeContatto" name="lastname" class="form-control"
+        <label for="formGroupExampleInput2">Partita Iva</label>
+        <input type="text" [(ngModel)]="client.partitaIva" name="partitaIva" class="form-control"
             id="formGroupExampleInput2" placeholder="lastname">
     </div>
     <div class="form-group">
-        <label for="formGroupExampleInput2">Phone</label>
-        <input type="text" [(ngModel)]="client.telefono" name="phone" class="form-control" id="formGroupExampleInput2"
-            placeholder="phone">
+        <label for="formGroupExampleInput2">Tipo cliente</label>
+        <input type="text" [(ngModel)]="client.tipoCliente" name="tipoCliente" class="form-control"
+            id="formGroupExampleInput2" placeholder="phone">
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Email</label>
-        <input type="text" [(ngModel)]="client.emailContatto" name="email" class="form-control"
+        <input type="text" [(ngModel)]="client.email" name="email" class="form-control" id="formGroupExampleInput2"
+            placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Pec</label>
+        <input type="text" [(ngModel)]="client.pec" name="pec" class="form-control" id="formGroupExampleInput2"
+            placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Telefono</label>
+        <input type="text" [(ngModel)]="client.telefono" name="telefono" class="form-control"
             id="formGroupExampleInput2" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Nome Contatto</label>
+        <input type="text" [(ngModel)]="client.nomeContatto" name="nomeContatto" class="form-control"
+            id="formGroupExampleInput2" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Cognome Contatto</label>
+        <input type="text" [(ngModel)]="client.cognomeContatto" name="cognomeContatto" class="form-control"
+            id="formGroupExampleInput2" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Telefono Contatto</label>
+        <input type="text" [(ngModel)]="client.telefonoContatto" name="telefonoContatto" class="form-control"
+            id="formGroupExampleInput2" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">email Contatto</label>
+        <input type="text" [(ngModel)]="client.emailContatto" name="emailContatto" class="form-control"
+            id="formGroupExampleInput2" placeholder="email">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Indirizzo sede operativa</label>
+
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Via</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Civico</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.civico" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Cap</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.cap" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Località</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control"
+                    placeholder="First name">
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Comune</label>
+        <div class="form-row">
+            <div class="col">
+                <label for="formGroupExampleInput2">Nome comune</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control"
+                    placeholder="First name">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Provincia</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control"
+                    placeholder="First name">
+            </div>
+        </div>
+
     </div>
     <div class="form-group">
         <button type="button" class="btn btn-secondary btn-sm" (click)="addNewClient()">i</button>
