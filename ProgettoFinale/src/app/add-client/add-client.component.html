@@ -50,46 +50,71 @@
         <input type="text" [(ngModel)]="client.emailContatto" name="emailContatto" class="form-control"
             placeholder="email">
     </div>
-    <h4>Indirizzo sede operativa</h4>
+    <h4><b>Indirizzo sede operativa</b></h4>
+    <b>Comune:</b>
+    <!--chiamata ajax per comuni-->
     <div class="form-group">
 
         <div class="form-row">
             <div class="col">
                 <label for="formGroupExampleInput2">Via</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="Via">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Civico</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="Civico">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Cap</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="Cap">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Località</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <input type="text" class="form-control" placeholder="Località">
             </div>
         </div>
 
     </div>
-    <h4>Indirizzo sede legale</h4>
+    <h4><b>Indirizzo sede legale</b></h4>
+    <b>Comune:</b>
+    <!--chiamata ajax per comuni-->
     <div class="form-group">
-        <label for="formGroupExampleInput2">Comune</label>
+
         <div class="form-row">
             <div class="col">
-                <label for="formGroupExampleInput2">Nome comune</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <label for="formGroupExampleInput2">Via</label>
+                <input type="text" class="form-control" placeholder="Via">
             </div>
             <div class="col">
-                <label for="formGroupExampleInput2">Provincia</label>
-                <input type="text" class="form-control" placeholder="First name">
+                <label for="formGroupExampleInput2">Civico</label>
+                <input type="text" class="form-control" placeholder="Civico">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Cap</label>
+                <input type="text" class="form-control" placeholder="Cap">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Località</label>
+                <input type="text" class="form-control" placeholder="Località">
             </div>
         </div>
 
     </div>
     <div class="form-group">
-        <button type="button" class="btn btn-secondary btn-sm" (click)="addNewClient()">i</button>
+        <label for="website">Data Inserimento</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+    <div class="form-group">
+        <label for="website">Data Ultimo Contatto</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+    <div class="form-group">
+        <label for="website">Fatturato Annuale</label>
+        <input type="text" class="form-control" id="website">
+    </div>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-dark form-control" (click)="addNewClient()">Add</button>
     </div>
 </form>
 

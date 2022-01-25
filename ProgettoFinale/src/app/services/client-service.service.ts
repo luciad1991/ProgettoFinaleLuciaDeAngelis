@@ -23,7 +23,7 @@ export class ClientServiceService {
   getAllClients() {
     //return this.http.get<ClientData>(environment.base +'api/clienti?page=0&size=20&sort=id,ASC',{headers:this.headers})
   //}
-  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,DESC');
+  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,ASC');
 }
 
 createNewClient(client: Client) {
