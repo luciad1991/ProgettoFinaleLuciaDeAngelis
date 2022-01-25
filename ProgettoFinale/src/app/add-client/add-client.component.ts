@@ -10,11 +10,16 @@ import { ClientServiceService } from '../services/client-service.service';
 })
 export class AddClientComponent implements OnInit {
 client : Client = new Client();
+tipoCliente : string[] = [];
+
 
   constructor(private clientService : ClientServiceService,
     private router : Router) { }
 
   ngOnInit(): void {
+    this.clientService.getTipoClient().subscribe(data=> {
+      this.tipoCliente = data;
+    })
   }
 
   addNewClient() {
@@ -24,5 +29,7 @@ this.clientService.createNewClient(this.client).subscribe(response=> {
 });
 
   }
+
+
 
 }

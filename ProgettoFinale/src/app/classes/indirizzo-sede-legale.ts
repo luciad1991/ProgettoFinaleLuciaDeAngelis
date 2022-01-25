@@ -8,6 +8,5 @@ export class IndirizzoSedeLegale {
     cap!: string;
     localita!:string;
     comune!: Comune;
-    provicia!: Provincia;
     
 }

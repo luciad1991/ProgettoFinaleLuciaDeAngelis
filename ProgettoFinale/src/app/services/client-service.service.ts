@@ -33,4 +33,8 @@ createNewClient(client: Client) {
 getClientById (id: number) {
   return this.http.get<Client>(environment.base + 'api/clienti/' + id)
 }
+
+getTipoClient() {
+  return this.http.get<string[]>(environment.base + 'api/clienti/tipicliente')
+}
 }
