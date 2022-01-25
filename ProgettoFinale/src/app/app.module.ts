@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -10,6 +10,7 @@ import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { FormsModule } from '@angular/forms';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { AddClientComponent } from './add-client/add-client.component';
+import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { AddClientComponent } from './add-client/add-client.component';
     
 
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpInterceptorInterceptor,
+    multi: true,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

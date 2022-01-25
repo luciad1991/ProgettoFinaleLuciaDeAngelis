@@ -14,12 +14,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+        <tr *ngFor="let item of client; index as i;">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.nomeContatto}}</td>
+            <td>{{item.cognomeContatto}}</td>
+            <td>{{item.telefono}}</td>
+            <td>{{item.emailContatto}}</td>
             <td>
                 <button type="button" class="btn btn-secondary btn-sm">i</button>
             </td>
