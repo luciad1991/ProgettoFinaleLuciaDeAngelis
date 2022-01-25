@@ -1,22 +1,21 @@
 <div class="card text-white bg-info mb-3 my-3" style="max-width: 18rem;">
-    <div class="card-header">Name: Lastname:</div>
+    <div class="card-header">{{client.nomeContatto}} {{client.cognomeContatto}}</div>
     <div class="card-body">
-        <h5 class="card-title">Partita IVA:</h5>
-        <p class="card-text">id:</p>
-        <p class="card-text">RagioneSociale:</p>
-        <p class="card-text">TipoCliente:</p>
-        <p class="card-text">Email:</p>
-        <p class="card-text">Pec:</p>
-        <p class="card-text">Telefono:</p>
-        <p class="card-text">Email Contatto:</p>
-        <p class="card-text">Indirizzo Sede Operativa:</p>
-        <p class="card-text">indirizzo Sede Legale:</p>
-        <p class="card-text">Data Inserimento:</p>
-        <p class="card-text">Data Ultimo Contatto</p>
-        <p class="card-text">Fatturato Annuale</p>
+        <h5 class="card-title">Partita IVA: {{client.partitaIva}}</h5>
+        <p class="card-text">id: {{client.id}}</p>
+        <p class="card-text">RagioneSociale: {{client.ragioneSociale}}</p>
+        <p class="card-text">TipoCliente:{{client.tipoCliente}}</p>
+        <p class="card-text">Email: {{client.email}}</p>
+        <p class="card-text">Pec: {{client.pec}}</p>
+        <p class="card-text">Telefono: {{client.telefono}}</p>
+        <p class="card-text">Email Contatto:{{client.emailContatto}}</p>
+        <p class="card-text">Data Inserimento:{{client.dataInserimento}}</p>
+        <p class="card-text">Data Ultimo Contatto{{client.dataUltimoContatto}}</p>
+        <p class="card-text">Fatturato Annuale{{client.fatturatoAnnuale}}</p>
 
     </div>
 </div>
 
 
-}
+<!-- <p class="card-text">Indirizzo Sede Operativa:{{client.indirizzoSedeOperativa}}</p>
+        <p class="card-text">indirizzo Sede Legale:{{client.indirizzoSedeLegale}}</p>-->

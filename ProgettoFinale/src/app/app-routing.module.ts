@@ -6,7 +6,7 @@ import { ClientsTableComponent } from './clients-table/clients-table.component';
 
 const routes: Routes = [
   {path: 'Clients', component: ClientsTableComponent},
-  {path: 'ClientDetail' ,component: ClientDetailsComponent},
+  {path: 'Clients/:id/detail' ,component: ClientDetailsComponent},
   {path: 'AddClient', component: AddClientComponent}
 ];
 

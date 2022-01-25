@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Client } from '../classes/client';
+import { ClientServiceService } from '../services/client-service.service';
 
 @Component({
   selector: 'app-client-details',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-details.component.css']
 })
 export class ClientDetailsComponent implements OnInit {
-
-  constructor() { }
+ client!: Client;
+  constructor(private clientService: ClientServiceService,
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.route.params.subscribe(data =>{
+      this.clientService.getClientById(data['id']).subscribe(response=> this.client = response)
+    })
   }
 
 }

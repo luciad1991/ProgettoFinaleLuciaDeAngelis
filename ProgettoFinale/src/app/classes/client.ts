@@ -1,3 +1,5 @@
+import { IndirizzoSedeLegale } from "./indirizzo-sede-legale";
+import {IndirizzoSedeOperativa} from "./indirizzo-sede-operativa"
 export class Client {
     id!: number;
     ragioneSociale!: string;
@@ -10,9 +12,11 @@ export class Client {
     cognomeContatto!: string;
     telefonoContatto!:string;
     emailContatto!: string;
-    indirizzoSedeOperativa!:Object; // da creare una classe?
-    indirizzoSedeLegale!: Object; //da creare una classe?
+    indirizzoSedeOperativa!: IndirizzoSedeOperativa;
+    indirizzoSedeLegale!: IndirizzoSedeLegale;
     dataInserimento!: string;
     dataUltimoContatto!: string;
     fatturatoAnnuale!: number;
+
 }
+

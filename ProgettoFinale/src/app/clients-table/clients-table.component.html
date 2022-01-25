@@ -21,7 +21,10 @@
             <td>{{item.telefono}}</td>
             <td>{{item.emailContatto}}</td>
             <td>
-                <button type="button" class="btn btn-secondary btn-sm">i</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="detailClient(item)">Details</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-secondary btn-sm">Remove</button>
             </td>
         </tr>
     </tbody>

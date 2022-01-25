@@ -23,10 +23,14 @@ export class ClientServiceService {
   getAllClients() {
     //return this.http.get<ClientData>(environment.base +'api/clienti?page=0&size=20&sort=id,ASC',{headers:this.headers})
   //}
-  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,ASC');
+  return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,DESC');
 }
 
 createNewClient(client: Client) {
-  return this.http.post<Client>(environment.base + '/api/clienti', client);
+  return this.http.post<Client>(environment.base + 'api/clienti', client);
+}
+
+getClientById (id: number) {
+  return this.http.get<Client>(environment.base + 'api/clienti/' + id)
 }
 }
