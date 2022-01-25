@@ -14,5 +14,5 @@ export class Client {
     indirizzoSedeLegale!: Object; //da creare una classe?
     dataInserimento!: string;
     dataUltimoContatto!: string;
-    fatturatoAnnuale!: number
+    fatturatoAnnuale!: number;
 }
