@@ -1,1 +1,29 @@
-<p>fattura-table works!</p>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Data</th>
+            <th scope="col">Numero</th>
+            <th scope="col">Anno</th>
+            <th scope="col">Importo</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of fattura; index as i;">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.data}}</td>
+            <td>{{item.numero}}</td>
+            <td>{{item.anno}}</td>
+            <td>{{item.importo}}</td>
+            <td>
+                <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-binoculars-fill"></i></button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-trash"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
