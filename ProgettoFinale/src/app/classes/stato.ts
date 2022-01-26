@@ -1,4 +1,4 @@
 export class Stato {
-        id!: number;
+        id?: number;
         nome!: string;
 }
