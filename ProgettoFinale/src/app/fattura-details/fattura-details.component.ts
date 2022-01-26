@@ -22,4 +22,8 @@ fattura!: Fattura
     })
   }
 
+  editFattura(item : Fattura){
+this.router.navigate(['Fatture', item.id, 'edit'])
+  }
+
 }

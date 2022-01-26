@@ -19,4 +19,8 @@ export class FatturaService {
   getFatturaById(id: number) {
 return this.http.get<Fattura>(environment.base + 'api/fatture/' + id);
   }
+
+  updateFatture (fattura: Fattura){
+    return this.http.put<Fattura>(environment.base + 'api/fatture/' +fattura.id, fattura)
+  }
 }
