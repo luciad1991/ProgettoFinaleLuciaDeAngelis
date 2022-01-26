@@ -28,31 +28,40 @@ export class ClientServiceService {
   return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,DESC');
 }
 
+
 createNewClient(client: Client) {
   return this.http.post<Client>(environment.base + 'api/clienti', client);
 }
+
 
 getClientById (id: number) {
   return this.http.get<Client>(environment.base + 'api/clienti/' + id)
 }
 
+
 getTipoClient() {
   return this.http.get<string[]>(environment.base + 'api/clienti/tipicliente')
 }
 
+
 updateClient(client : Client) {
   return this.http.put<Client>(environment.base + 'api/clienti/' + client.id , client)
 }
+
+
 removeClient(client: Client) {
   return this.http.delete(environment.base + 'api/clienti/' + client.id)
 }
+
 
 getAllComuni () {
   return this.http.get<ComuniData>(environment.base + 'api/comuni?page=0&size=20&sort=id,DESC')
 }
 
+
 getAllProvince() {
   return this.http.get<ProvinceData>(environment.base + 'api/province?page=0&size=20&sort=id,DESC')
 }
+
 
 }
