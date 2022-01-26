@@ -27,5 +27,9 @@ export class FatturaTableComponent implements OnInit {
     this.router.navigate(['Fatture', item.id, 'detail'])
 
   }
+  removeFattura(item: Fattura){
+    this.fatturaService.removeFattura(item).subscribe(data => {
+      this.fattura = this.fattura.filter(ele => ele !== item);
+    })
 
-}
+  }}

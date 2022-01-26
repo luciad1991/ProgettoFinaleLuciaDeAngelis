@@ -23,4 +23,8 @@ return this.http.get<Fattura>(environment.base + 'api/fatture/' + id);
   updateFatture (fattura: Fattura){
     return this.http.put<Fattura>(environment.base + 'api/fatture/' +fattura.id, fattura)
   }
+
+  removeFattura(fattura: Fattura) {
+    return this.http.delete(environment.base + 'api/fatture/' + fattura.id)
+  }
 }
