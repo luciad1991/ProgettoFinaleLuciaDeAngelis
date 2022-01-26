@@ -14,7 +14,7 @@ client : Client = new Client();
 tipoCliente : string[] = [];
 comuni: Comune [] = []
 prova : Client = {
-  "ragioneSociale": "Bruno-Romano SPA - TEST",
+  "ragioneSociale": "LUCIA TEST PROVA AIUTO",
   "partitaIva": "14812266616",
   "tipoCliente": "SRL",
   "email": "rosalino.caruso@gmail.com",
@@ -74,10 +74,11 @@ prova : Client = {
   }
 
   addNewClient() {
-this.clientService.createNewClient(this.client).subscribe(response=> {
-  console.log(response);
+this.clientService.createNewClient(this.prova).subscribe(response=> {
+  console.log(this.prova);
   this.router.navigate(['Clients'])
 });
+
 
   }
 
