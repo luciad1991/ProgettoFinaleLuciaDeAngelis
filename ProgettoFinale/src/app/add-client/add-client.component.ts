@@ -36,6 +36,7 @@ comuni: Comune [] = []
     this.clientService.createNewClient(this.client).subscribe(data=> {
     this.client = data;
     this.router.navigate(['Clients'])
+
 });
 
   }

@@ -22,6 +22,7 @@ export class Client {
     constructor () {
         this.indirizzoSedeOperativa = new IndirizzoSedeOperativa();
         this.indirizzoSedeLegale = new IndirizzoSedeLegale()
+        
     }
 
 }

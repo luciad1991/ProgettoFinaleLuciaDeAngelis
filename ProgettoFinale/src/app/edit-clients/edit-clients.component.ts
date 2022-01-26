@@ -31,8 +31,7 @@ tipoCliente : string[] = []
   }
 
   Save() {
-    this.client.dataInserimento = "2019-06-01T08:11:01.911+00:00";
-    this.client.dataUltimoContatto = "2021-03-24T21:32:06.375+00:00";
+
     this.clientService.updateClient(this.client).subscribe(data=>{
       this.client = data;
       this.router.navigate(['Clients'])
