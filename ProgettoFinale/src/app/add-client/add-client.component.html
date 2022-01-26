@@ -1,4 +1,3 @@
-{{client|json}}
 <h2 class="m-auto">Add a new client</h2>
 <form class="my-3">
     <div class="form-group">
@@ -74,9 +73,9 @@
                 <input type="text" class="form-control" placeholder="Località">
             </div>
             <div class="col">
-                <label> Comune</label>
-                <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
-                    <option *ngFor="let item of comuni">
+                <label for="tipoCliente">Comune:</label>
+                <select [(ngModel)]="client.indirizzoSedeOperativa.comune" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="item" *ngFor="let item of comuni">
                         {{item.nome}}
                     </option>
                 </select>
@@ -87,8 +86,9 @@
                     class="form-control" placeholder="Provincia...">
             </div>
             <div class="col">
-                <label for="formGroupExampleInput2">Sigla</label>
-                <input type="text" class="form-control" placeholder="sigla">
+                <label for="formGroupExampleInput2">Sigla:</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.sigla" name="sigla"
+                    class="form-control" placeholder="Sigla...">
             </div>
         </div>
 
@@ -115,9 +115,11 @@
                 <input type="text" class="form-control" placeholder="Località">
             </div>
             <div class="col">
-                <label> Comune</label>
-                <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
-                    <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
+                <label for="tipoCliente">Comune:</label>
+                <select [(ngModel)]="client.indirizzoSedeOperativa.comune" [ngModelOptions]="{standalone: true}">
+                    <option [ngValue]="item" *ngFor="let item of comuni">
+                        {{item.nome}}
+                    </option>
                 </select>
             </div>
             <div class="col">
@@ -126,8 +128,9 @@
                     class="form-control" placeholder="Provincia...">
             </div>
             <div class="col">
-                <label for="formGroupExampleInput2">Sigla</label>
-                <input type="text" class="form-control" placeholder="sigla">
+                <label for="formGroupExampleInput2">Sigla:</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.sigla" name="sigla"
+                    class="form-control" placeholder="Sigla...">
             </div>
         </div>
 
@@ -145,50 +148,3 @@
         <button type="button" class="btn btn-dark form-control" (click)="addNewClient()">Add</button>
     </div>
 </form>
-
-<!--<form>
-    <h3>Indirizzo sede operativa</h3>
-    <div class="form-group">
-
-        <div class="form-row">
-            <div class="col">
-                <label for="formGroupExampleInput2">Via</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput2">Civico</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput2">Cap</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput2">Località</label>
-                <input type="text" class="form-control" placeholder="First name">
-            </div>
-        </div>
-
-    </div>
-</form>
-<form>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Comune</label>
-        <div class="form-row">
-            <div class="col">
-                <label for="formGroupExampleInput2">Nome comune</label>
-                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.via" class="form-control"
-                    placeholder="First name">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput2">Provincia</label>
-                <input type="text" [(ngModel)]="client.indirizzoSedeLegale.localita" class="form-control"
-                    placeholder="First name">
-            </div>
-        </div>
-
-    </div>
-    <div class="form-group">
-        <button type="button" class="btn btn-secondary btn-sm" (click)="addNewClient()">i</button>
-    </div>
-</form>-->
