@@ -76,10 +76,15 @@
             <div class="col">
                 <label> Comune</label>
                 <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
-                    <option *ngFor="let item of comuni" [ngValue]="item">
+                    <option *ngFor="let item of comuni">
                         {{item.nome}}
                     </option>
                 </select>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Provincia:</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" name="nome"
+                    class="form-control" placeholder="Provincia...">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Sigla</label>
@@ -112,10 +117,13 @@
             <div class="col">
                 <label> Comune</label>
                 <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
-                    <option *ngFor="let item of comuni" [ngValue]="item">
-                        {{item.nome}}
-                    </option>
+                    <option [ngValue]="item" *ngFor="let item of comuni">{{item.nome}}</option>
                 </select>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Provincia:</label>
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.comune.provincia.nome" name="nome"
+                    class="form-control" placeholder="Provincia...">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Sigla</label>

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { subscribeOn } from 'rxjs';
 import { Client } from '../classes/client';
 import { Comune } from '../classes/comune';
-import { Provincia } from '../classes/provincia';
 import { ClientServiceService } from '../services/client-service.service';
 
 @Component({
@@ -15,6 +13,49 @@ export class AddClientComponent implements OnInit {
 client : Client = new Client();
 tipoCliente : string[] = [];
 comuni: Comune [] = []
+prova : Client = {
+  "ragioneSociale": "Bruno-Romano SPA - TEST",
+  "partitaIva": "14812266616",
+  "tipoCliente": "SRL",
+  "email": "rosalino.caruso@gmail.com",
+  "pec": "antonio.damico@gmail.com",
+  "telefono": "+38 855 62 44 5685",
+  "nomeContatto": "Sarita",
+  "cognomeContatto": "Serr",
+  "telefonoContatto": "380.260.3225",
+  "emailContatto": "armando.martinelli@hotmail.com",
+  "indirizzoSedeOperativa": {
+      "via": "Contrada Gastone 4, Piano 4",
+      "civico": "698",
+      "cap": "38615",
+      "localita": "Vania del friuli",
+      "comune": {
+          "id": 1,
+          "nome": "LASTRA A SIGNA",
+          "provincia": {
+              "id": 1,
+              "nome": "FIRENZE",
+              "sigla": "FI"
+          }
+      }
+  },
+  "indirizzoSedeLegale": {
+      "via": "Strada Ricci 55, Appartamento 58",
+      "civico": "925",
+      "cap": "65995",
+      "localita": "Ivonne umbro",
+      "comune": {
+          "id": 1,
+          "nome": "LASTRA A SIGNA",
+          "provincia": {
+              "id": 1,
+              "nome": "FIRENZE",
+              "sigla": "FI"
+          }
+      }
+  },
+  
+}
 
 
 
