@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { subscribeOn } from 'rxjs';
 import { Client } from '../classes/client';
+import { Comune } from '../classes/comune';
+import { Provincia } from '../classes/provincia';
 import { ClientServiceService } from '../services/client-service.service';
 
 @Component({
@@ -11,15 +14,22 @@ import { ClientServiceService } from '../services/client-service.service';
 export class AddClientComponent implements OnInit {
 client : Client = new Client();
 tipoCliente : string[] = [];
+comuni: Comune [] = []
 
 
-  constructor(private clientService : ClientServiceService,
+
+  constructor(
+    private clientService : ClientServiceService,
     private router : Router) { }
 
   ngOnInit(): void {
     this.clientService.getTipoClient().subscribe(data=> {
       this.tipoCliente = data;
     })
+    this.clientService.getAllComuni().subscribe(data => {
+      this.comuni = data.content;
+    })
+ 
   }
 
   addNewClient() {

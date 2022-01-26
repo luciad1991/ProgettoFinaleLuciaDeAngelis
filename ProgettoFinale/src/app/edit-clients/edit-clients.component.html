@@ -58,7 +58,8 @@
         <div class="form-row">
             <div class="col">
                 <label>Via</label>
-                <input type="text" class="form-control" placeholder="Via">
+                <input type="text" [(ngModel)]="client.indirizzoSedeOperativa.via" [ngModelOptions]="{standalone: true}"
+                    class="form-control" placeholder="Via">
             </div>
             <div class="col">
                 <label>Civico</label>

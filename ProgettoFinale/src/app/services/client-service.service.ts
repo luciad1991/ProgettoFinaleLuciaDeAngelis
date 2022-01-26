@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Client } from '../classes/client';
 import { ClientData } from '../interfaces/client-data';
+import { ComuniData } from '../interfaces/comuni-data';
+import { ProvinceData } from '../interfaces/province-data';
 
 
 @Injectable({
@@ -26,7 +28,7 @@ export class ClientServiceService {
   return this.http.get<ClientData>(environment.base+'api/clienti?page=0&size=20&sort=id,DESC');
 }
 
-createNewClient(client: Client) {
+createNewClient(client: any) {
   return this.http.post<Client>(environment.base + 'api/clienti', client);
 }
 
@@ -45,5 +47,12 @@ removeClient(client: Client) {
   return this.http.delete(environment.base + 'api/clienti/' + client.id)
 }
 
+getAllComuni () {
+  return this.http.get<ComuniData>(environment.base + 'api/comuni?page=0&size=20&sort=id,DESC')
+}
+
+getAllProvince() {
+  return this.http.get<ProvinceData>(environment.base + 'api/province?page=0&size=20&sort=id,DESC')
+}
 
 }

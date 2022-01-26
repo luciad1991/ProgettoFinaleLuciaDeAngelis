@@ -1,8 +1,7 @@
-import { Client } from "../classes/client";
+import { Comune } from "../classes/comune";
 
-export interface ClientData {
-    
-    content : Array <Client>;
+export interface ComuniData {
+    content : Array <Comune>;
     pageable: Object;
     last: Boolean;
     totalPages: number;

@@ -1,3 +1,4 @@
+{{client|json}}
 <h2 class="m-auto">Add a new client</h2>
 <form class="my-3">
     <div class="form-group">
@@ -51,14 +52,14 @@
             placeholder="email">
     </div>
     <h4><b>Indirizzo sede operativa</b></h4>
-    <b>Comune:</b>
     <!--chiamata ajax per comuni-->
     <div class="form-group">
 
         <div class="form-row">
             <div class="col">
                 <label for="formGroupExampleInput2">Via</label>
-                <input type="text" class="form-control" placeholder="Via">
+                <input [(ngModel)]="client.indirizzoSedeOperativa.via" name="via_indirizzo_sede_operativa" type="text"
+                    class="form-control" placeholder="Via">
             </div>
             <div class="col">
                 <label for="formGroupExampleInput2">Civico</label>
@@ -71,13 +72,24 @@
             <div class="col">
                 <label for="formGroupExampleInput2">Località</label>
                 <input type="text" class="form-control" placeholder="Località">
+            </div>
+            <div class="col">
+                <label> Comune</label>
+                <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let item of comuni" [ngValue]="item">
+                        {{item.nome}}
+                    </option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Sigla</label>
+                <input type="text" class="form-control" placeholder="sigla">
             </div>
         </div>
 
     </div>
     <h4><b>Indirizzo sede legale</b></h4>
-    <b>Comune:</b>
-    <!--chiamata ajax per comuni-->
+
     <div class="form-group">
 
         <div class="form-row">
@@ -96,6 +108,18 @@
             <div class="col">
                 <label for="formGroupExampleInput2">Località</label>
                 <input type="text" class="form-control" placeholder="Località">
+            </div>
+            <div class="col">
+                <label> Comune</label>
+                <select [(ngModel)]="client.indirizzoSedeOperativa.comune.nome" [ngModelOptions]="{standalone: true}">
+                    <option *ngFor="let item of comuni" [ngValue]="item">
+                        {{item.nome}}
+                    </option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput2">Sigla</label>
+                <input type="text" class="form-control" placeholder="sigla">
             </div>
         </div>
 
@@ -106,10 +130,6 @@
     </div>
     <div class="form-group">
         <label for="website">Data Ultimo Contatto</label>
-        <input type="text" class="form-control" id="website">
-    </div>
-    <div class="form-group">
-        <label for="website">Fatturato Annuale</label>
         <input type="text" class="form-control" id="website">
     </div>
 

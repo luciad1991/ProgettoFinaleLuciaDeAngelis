@@ -2,29 +2,29 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <!--nomecontatto-->
-            <th scope="col">Lastname</th>
-            <!--cognomecontatto-->
-            <th scope="col">Phone</th>
-            <!--telefono-->
-            <th scope="col">Email</th>
-            <!--emailContatto-->
+            <th scope="col">Ragione Sociale</th>
+            <th scope="col">Partita Iva</th>
+            <th scope="col">Tipo Cliente</th>
+            <th scope="col">Nome Contatto</th>
+            <th scope="col">Cognome Contatto</th>
             <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let item of client; index as i;">
             <th scope="row">{{item.id}}</th>
+            <td>{{item.ragioneSociale}}</td>
+            <td>{{item.partitaIva}}</td>
+            <td>{{item.tipoCliente}}</td>
             <td>{{item.nomeContatto}}</td>
             <td>{{item.cognomeContatto}}</td>
-            <td>{{item.telefono}}</td>
-            <td>{{item.emailContatto}}</td>
             <td>
-                <button type="button" class="btn btn-secondary btn-sm" (click)="detailClient(item)">Details</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="detailClient(item)"><i
+                        class="bi bi-binoculars-fill"></i></button>
             </td>
             <td>
-                <button type="button" class="btn btn-secondary btn-sm" (click)="removeClient(item)">Remove</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="removeClient(item)"><i
+                        class="bi bi-trash"></i></button>
             </td>
         </tr>
     </tbody>
