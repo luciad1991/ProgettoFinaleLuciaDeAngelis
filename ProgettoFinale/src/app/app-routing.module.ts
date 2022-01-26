@@ -4,6 +4,7 @@ import { AddClientComponent } from './add-client/add-client.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
+import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 import { FatturaTableComponent } from './fattura-table/fattura-table.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'Clients/:id/edit', component : EditClientsComponent},
   {path: 'AddClient', component: AddClientComponent},
   {path: 'Fatture', component: FatturaTableComponent},
+  {path: 'Fatture/:id/detail', component:FatturaDetailsComponent}
 ];
 
 @NgModule({

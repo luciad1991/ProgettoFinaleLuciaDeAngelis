@@ -13,6 +13,7 @@ import { AddClientComponent } from './add-client/add-client.component';
 import { HttpInterceptorInterceptor } from './http-interceptor.interceptor';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
 import { FatturaTableComponent } from './fattura-table/fattura-table.component';
+import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FatturaTableComponent } from './fattura-table/fattura-table.component';
     ClientDetailsComponent,
     AddClientComponent,
     EditClientsComponent,
-    FatturaTableComponent
+    FatturaTableComponent,
+    FatturaDetailsComponent
   ],
   imports: [
     BrowserModule,

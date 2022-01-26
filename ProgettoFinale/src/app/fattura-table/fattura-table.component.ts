@@ -23,4 +23,9 @@ export class FatturaTableComponent implements OnInit {
     })
   }
 
+  detailFattura(item: Fattura){
+    this.router.navigate(['Fatture', item.id, 'detail'])
+
+  }
+
 }

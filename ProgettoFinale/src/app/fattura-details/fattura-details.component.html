@@ -1,0 +1,15 @@
+<div class="card text-white bg-info my-3" style="max-width: 35rem;">
+    <div class="card-header">{{fattura.cliente.nomeContatto}} {{fattura.cliente.cognomeContatto}}</div>
+    <div class="card-body">
+        <h5 class="card-title">{{fattura.cliente.partitaIva}}</h5>
+        <p class="card-text">{{fattura.data}}</p>
+        <p class="card-text">{{fattura.numero}}</p>
+        <p class="card-text">{{fattura.anno}}</p>
+        <p class="card-text">{{fattura.importo}}</p>
+        <p class="card-text">Stato Fattura</p>
+        <ul>
+            <li>{{fattura.stato.id}}</li>
+            <li>{{fattura.stato.nome}}</li>
+        </ul>
+    </div>
+</div>
