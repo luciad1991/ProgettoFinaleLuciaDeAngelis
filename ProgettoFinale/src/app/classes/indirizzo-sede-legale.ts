@@ -1,5 +1,5 @@
 import { Comune } from "./comune";
-import {Provincia} from "./provincia"
+
 
 export class IndirizzoSedeLegale {
     id?: number;
