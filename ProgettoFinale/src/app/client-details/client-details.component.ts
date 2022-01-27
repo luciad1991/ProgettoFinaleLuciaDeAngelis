@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Client } from '../classes/client';
 import { ClientServiceService } from '../services/client-service.service';
 
+
 @Component({
   selector: 'app-client-details',
   templateUrl: './client-details.component.html',
@@ -21,6 +22,10 @@ export class ClientDetailsComponent implements OnInit {
   }
   editClient(client: Client) {
     this.router.navigate(['Clients', client.id ,'edit'])
+  }
+
+  AddNewfattura(client: Client){
+this.router.navigate(['Clients', client.id, 'addFattura'])
   }
 
 }

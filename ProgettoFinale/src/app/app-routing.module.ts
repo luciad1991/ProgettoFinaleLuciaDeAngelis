@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'Fatture', component: FatturaTableComponent},
   {path: 'Fatture/:id/detail', component:FatturaDetailsComponent},
   {path: 'Fatture/:id/edit' ,component: EditFattureComponent},
-  {path: 'AddFattura', component:AddFatturaComponent}
+  {path: 'Clients/:id/addFattura', component:AddFatturaComponent}
 ];
 
 @NgModule({
