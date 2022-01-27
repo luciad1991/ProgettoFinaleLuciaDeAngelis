@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Client } from '../classes/client';
 import { Comune } from '../classes/comune';
+import { Fattura } from '../classes/fattura';
 import { Provincia } from '../classes/provincia';
 import { ClientData } from '../interfaces/client-data';
 import { ComuniData } from '../interfaces/comuni-data';
@@ -73,5 +74,8 @@ addNewProvincia (provincia : Provincia) {
   return this.http.post<Provincia>(environment.base + 'api/province' , provincia)
 }
 
+getFatturaByCliente(client: Client){
+  return this.http.get<Fattura>(environment.base + 'api/fatture/cliente/' +client.id + '?page=0&size=20&sort=id,ASC')
+}
 
 }
