@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddClientComponent } from './add-client/add-client.component';
+import { AddComuneComponent } from './add-comune/add-comune.component';
 import { AddFatturaComponent } from './add-fattura/add-fattura.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'Fatture', component: FatturaTableComponent},
   {path: 'Fatture/:id/detail', component:FatturaDetailsComponent},
   {path: 'Fatture/:id/edit' ,component: EditFattureComponent},
-  {path: 'Clients/:id/addFattura', component:AddFatturaComponent}
+  {path: 'Clients/:id/addFattura', component:AddFatturaComponent},
+  {path: 'AddComune', component: AddComuneComponent}
 ];
 
 @NgModule({
