@@ -74,7 +74,7 @@ addNewProvincia (provincia : Provincia) {
   return this.http.post<Provincia>(environment.base + 'api/province' , provincia)
 }
 
-getFatturaByCliente(client: Client){
+getFatturaByCliente(client: any){
   return this.http.get<Fattura>(environment.base + 'api/fatture/cliente/' +client.id + '?page=0&size=20&sort=id,ASC')
 }
 

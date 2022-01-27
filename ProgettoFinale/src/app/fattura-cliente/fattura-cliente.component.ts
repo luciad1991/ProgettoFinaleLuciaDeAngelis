@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Client } from '../classes/client';
+import { Fattura } from '../classes/fattura';
 import { ClientServiceService } from '../services/client-service.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ClientServiceService } from '../services/client-service.service';
   styleUrls: ['./fattura-cliente.component.css']
 })
 export class FatturaClienteComponent implements OnInit {
- cliente : Client = new Client();
+
 
   constructor(
     private clientService : ClientServiceService,
@@ -18,9 +19,8 @@ export class FatturaClienteComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(data=> {
-      this.cliente.id = data['id']; 
-       })
+
+
   
   }
 
