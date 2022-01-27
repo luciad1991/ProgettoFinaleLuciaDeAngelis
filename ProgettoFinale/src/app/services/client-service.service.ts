@@ -2,9 +2,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Client } from '../classes/client';
+import { Comune } from '../classes/comune';
+import { Provincia } from '../classes/provincia';
 import { ClientData } from '../interfaces/client-data';
 import { ComuniData } from '../interfaces/comuni-data';
-import { ProvinceData } from '../interfaces/province-data';
+import { ProvinciaData } from '../interfaces/provincia-data';
+
 
 
 @Injectable({
@@ -53,14 +56,21 @@ removeClient(client: Client) {
   return this.http.delete(environment.base + 'api/clienti/' + client.id)
 }
 
-
 getAllComuni () {
   return this.http.get<ComuniData>(environment.base + 'api/comuni?page=0&size=20&sort=id,DESC')
 }
 
 
 getAllProvince() {
-  return this.http.get<ProvinceData>(environment.base + 'api/province?page=0&size=20&sort=id,DESC')
+  return this.http.get<ProvinciaData>(environment.base + 'api/province?page=0&size=20&sort=id,DESC')
+}
+
+AddNuovoComune (comune : Comune) {
+  return this.http.post<Comune>(environment.base + 'api/comuni' , comune)
+}
+
+addNewProvincia (provincia : Provincia) {
+  return this.http.post<Provincia>(environment.base + 'api/province' , provincia)
 }
 
 

@@ -17,6 +17,7 @@ import { FatturaDetailsComponent } from './fattura-details/fattura-details.compo
 import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
 import { AddFatturaComponent } from './add-fattura/add-fattura.component';
 import { AddComuneComponent } from './add-comune/add-comune.component';
+import { AddNewProvinciaComponent } from './add-new-provincia/add-new-provincia.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AddComuneComponent } from './add-comune/add-comune.component';
     EditFattureComponent,
     AddFatturaComponent,
     AddComuneComponent,
+    AddNewProvinciaComponent,
     
   ],
   imports: [
