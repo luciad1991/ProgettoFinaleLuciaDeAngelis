@@ -37,4 +37,8 @@ return this.http.get<Fattura>(environment.base + 'api/fatture/' + id);
     return this.http.get<Stato>(environment.base + 'api/statifattura/' + stato.id )
     
   }
+
+  getFatturaByCliente(fattura: Fattura){
+    return this.http.get<Fattura>(environment.base + '/api/fatture/cliente/3?page=0&size=20&sort=id,ASC')
+  }
 }

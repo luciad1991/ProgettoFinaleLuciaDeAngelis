@@ -1,5 +1,7 @@
 <div class="card text-white bg-info my-3" style="max-width: 35rem;">
-    <div class="card-header">{{client.nomeContatto}} {{client.cognomeContatto}}</div>
+    <div class="card-header">{{client.nomeContatto}} {{client.cognomeContatto}} <button class="float-right"
+            (click)="seeDetail(client)">Vedi
+            fatture</button></div>
     <div class="card-body">
         <h5 class="card-title">Partita IVA: {{client.partitaIva}}</h5>
         <p class="card-text">id: {{client.id}}</p>

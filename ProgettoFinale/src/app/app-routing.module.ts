@@ -8,6 +8,7 @@ import { ClientDetailsComponent } from './client-details/client-details.componen
 import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
 import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
+import { FatturaClienteComponent } from './fattura-cliente/fattura-cliente.component';
 import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 import { FatturaTableComponent } from './fattura-table/fattura-table.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'Clients/:id/addFattura', component:AddFatturaComponent},
   {path: 'AddComune', component: AddComuneComponent},
   {path: 'AddProvincia', component: AddNewProvinciaComponent},
+  {path: 'Fattura/:id/fatturaCliente', component: FatturaClienteComponent}
   //{path: 'AddFattura', component: AddFatturaComponent}
 ];
 

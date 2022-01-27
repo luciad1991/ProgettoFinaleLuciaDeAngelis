@@ -28,4 +28,8 @@ export class ClientDetailsComponent implements OnInit {
 this.router.navigate(['Clients', client.id, 'addFattura'])
   }
 
+  seeDetail(client : Client){
+    this.router.navigate(['Fattura', client.id ,'fatturaCliente'])
+
+  }
 }
