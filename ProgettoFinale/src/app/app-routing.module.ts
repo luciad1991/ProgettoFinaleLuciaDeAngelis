@@ -11,8 +11,10 @@ import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
 import { FatturaClienteComponent } from './fattura-cliente/fattura-cliente.component';
 import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 import { FatturaTableComponent } from './fattura-table/fattura-table.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path: '' , component: HomeComponent},
   {path: 'Clients', component: ClientsTableComponent},
   {path: 'Clients/:id/detail' ,component: ClientDetailsComponent},
   {path: 'Clients/:id/edit', component : EditClientsComponent},
