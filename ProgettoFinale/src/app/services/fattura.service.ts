@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Fattura } from '../classes/fattura';
+import { Stato } from '../classes/stato';
 import { FatturaData } from '../interfaces/fattura-data';
 
 @Injectable({
@@ -30,5 +31,10 @@ return this.http.get<Fattura>(environment.base + 'api/fatture/' + id);
 
   createNewFattura(fattura: Fattura){
     return this.http.post<Fattura>(environment.base + 'api/fatture', fattura)
+  }
+
+  getStatoById (stato : Stato) {
+    return this.http.get<Stato>(environment.base + 'api/statifattura/' + stato.id )
+    
   }
 }
