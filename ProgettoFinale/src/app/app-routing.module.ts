@@ -21,7 +21,8 @@ const routes: Routes = [
   {path: 'Fatture/:id/edit' ,component: EditFattureComponent},
   {path: 'Clients/:id/addFattura', component:AddFatturaComponent},
   {path: 'AddComune', component: AddComuneComponent},
-  {path: 'AddProvincia', component: AddNewProvinciaComponent}
+  {path: 'AddProvincia', component: AddNewProvinciaComponent},
+  //{path: 'AddFattura', component: AddFatturaComponent}
 ];
 
 @NgModule({

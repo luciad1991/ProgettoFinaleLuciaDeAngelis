@@ -14,7 +14,8 @@ import { FatturaService } from '../services/fattura.service';
 export class AddFatturaComponent implements OnInit {
 fattura: Fattura = new Fattura()
 client: Client = new Client();
-stato : Stato = new Stato();
+stato : Stato = new Stato()
+statOfattura : Stato [] = []
 
 /*prova : Fattura = {"data":"2019-07-31T16:09:43.763+00:00","numero":0,"anno":2019,"importo":1692.16,"stato":{
   "id": 1,

@@ -13,12 +13,12 @@
         <input type="text" [(ngModel)]="fattura.importo" name="importo_fattura" class="form-control"
             placeholder="Es: 1692.16">
     </div>
-    <h4>Stato</h4>
-    <div class="mb-3">
-        <label class="form-label">Stato fattura</label>
-        <select name="tipoCliente" class="mx-3">
-            <option>Pagata</option>
-            <option>Non pagata</option>
+    <div class="form-group col-md-6">
+        <label for="tipo">Stato:</label>
+        <select class="p-2" [(ngModel)]="stato" name="tipo" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of statOfattura">
+                {{item.nome}}
+            </option>
         </select>
     </div>
 
