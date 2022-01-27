@@ -29,7 +29,7 @@ return this.http.get<Fattura>(environment.base + 'api/fatture/' + id);
     return this.http.delete(environment.base + 'api/fatture/' + fattura.id)
   }
 
-  createNewFattura(fattura: any){
+  createNewFattura(fattura: Fattura){
     return this.http.post<Fattura>(environment.base + 'api/fatture', fattura)
   }
 

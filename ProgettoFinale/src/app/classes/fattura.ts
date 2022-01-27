@@ -1,6 +1,4 @@
 import { Client } from "./client";
-import { IndirizzoSedeLegale } from "./indirizzo-sede-legale";
-import { IndirizzoSedeOperativa } from "./indirizzo-sede-operativa";
 import { Stato } from "./stato";
 
 export class Fattura {

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Client } from '../classes/client';
 import { Fattura } from '../classes/fattura';
-import { Stato } from '../classes/stato';
-import { ClientServiceService } from '../services/client-service.service';
 import { FatturaService } from '../services/fattura.service';
 
 @Component({
@@ -13,17 +10,13 @@ import { FatturaService } from '../services/fattura.service';
 })
 export class AddFatturaComponent implements OnInit {
 
+fattura: Fattura = new Fattura ()
 
-
-
-
-fattura = {"data":"2019-07-31T16:09:43.763+00:00","numero":0,"anno":2019,"importo":1692.16,"stato":{
+/*fattura = {"data":"2019-07-31T16:09:43.763+00:00","numero":0,"anno":2019,"importo":1692.16,"stato":{
   "id": 2,
   "nome": "NON PAGATA"
 },
-"cliente":{"id":1}}
-
-
+"cliente":{"id":1}}*/
   constructor(
     private fatturaService : FatturaService,
     private router: Router,
@@ -38,6 +31,9 @@ fattura = {"data":"2019-07-31T16:09:43.763+00:00","numero":0,"anno":2019,"import
   }
 
   addNewFattura(){
+    this.fattura.data= "2019-07-31T16:09:43.763+00:00";
+   this.fattura.stato.id= 2;
+   this.fattura.stato.nome ="NON PAGATO"
     this.fatturaService.createNewFattura(this.fattura).subscribe();
       this.router.navigate(['Fatture'])
       console.log(this.fattura);
