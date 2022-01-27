@@ -15,6 +15,7 @@ import { EditClientsComponent } from './edit-clients/edit-clients.component';
 import { FatturaTableComponent } from './fattura-table/fattura-table.component';
 import { FatturaDetailsComponent } from './fattura-details/fattura-details.component';
 import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
+import { AddFatturaComponent } from './add-fattura/add-fattura.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { EditFattureComponent } from './edit-fatture/edit-fatture.component';
     FatturaTableComponent,
     FatturaDetailsComponent,
     EditFattureComponent,
+    AddFatturaComponent,
     
   ],
   imports: [

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddClientComponent } from './add-client/add-client.component';
+import { AddFatturaComponent } from './add-fattura/add-fattura.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { ClientsTableComponent } from './clients-table/clients-table.component';
 import { EditClientsComponent } from './edit-clients/edit-clients.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'AddClient', component: AddClientComponent},
   {path: 'Fatture', component: FatturaTableComponent},
   {path: 'Fatture/:id/detail', component:FatturaDetailsComponent},
-  {path: 'Fatture/:id/edit' ,component: EditFattureComponent}
+  {path: 'Fatture/:id/edit' ,component: EditFattureComponent},
+  {path: 'AddFattura', component:AddFatturaComponent}
 ];
 
 @NgModule({
