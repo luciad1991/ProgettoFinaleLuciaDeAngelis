@@ -1,14 +1,16 @@
 <form class="my-4">
     <div class="form-row">
-        <div class="form-group col-md-6 ">
+        <div class="form-group col-md-4 ">
             <label for="nomeComune">Nome Provincia:</label>
             <input [(ngModel)]="provincia.nome" type="text" name="nomeComune" class="form-control">
         </div>
     </div>
 
-    <div class="form-group col-md-6">
-        <label for="tipo">Sigla Provincia:</label>
-        <input class="p-2" [(ngModel)]="provincia.sigla" name="tipo">
+    <div class="form-group col-md-">
+        <div>
+            <label for="tipo">Sigla Provincia:</label>
+            <input class="p-2" [(ngModel)]="provincia.sigla" name="tipo">
+        </div>
 
     </div>
     <div class="form-group my-4">
