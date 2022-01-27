@@ -13,14 +13,6 @@
         <input type="text" [(ngModel)]="fattura.importo" name="importo_fattura" class="form-control"
             placeholder="Es: 1692.16">
     </div>
-    <div class="form-group col-md-6">
-        <label for="tipo">Stato:</label>
-        <select class="p-2" [(ngModel)]="stato" name="tipo" [ngModelOptions]="{standalone: true}">
-            <option [ngValue]="item" *ngFor="let item of statOfattura">
-                {{item.nome}}
-            </option>
-        </select>
-    </div>
 
     <button type="button" class="form-control btn btn-secondary" (click)="addNewFattura()">Aggiungi</button>
 
