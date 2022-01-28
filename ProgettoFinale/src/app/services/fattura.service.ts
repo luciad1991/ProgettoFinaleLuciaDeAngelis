@@ -14,7 +14,7 @@ export class FatturaService {
 
 
   getAllFatture() {
-    return this.http.get<FatturaData>(environment.base + 'api/fatture?page=0&size=20&sort=id,ASC');
+    return this.http.get<FatturaData>(environment.base + 'api/fatture?page=0&size=20&sort=id,DESC');
   }
 
   getFatturaById(id: number) {
