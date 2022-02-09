@@ -13,12 +13,12 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let item of fattura">
             <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{item.data}}</td>
+            <td>{{item.numero}}</td>
+            <td>{{item.anno}}</td>
+            <td>{{item.importo}}</td>
             <td>
                 <button type="button" class="btn btn-secondary btn-sm"><i class="bi bi-binoculars-fill"></i></button>
             </td>

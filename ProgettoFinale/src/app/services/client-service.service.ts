@@ -1,13 +1,11 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Client } from '../classes/client';
 import { Comune } from '../classes/comune';
-import { Fattura } from '../classes/fattura';
 import { Provincia } from '../classes/provincia';
 import { ClientData } from '../interfaces/client-data';
 import { ComuniData } from '../interfaces/comuni-data';
-import { FatturaData } from '../interfaces/fattura-data';
 import { ProvinciaData } from '../interfaces/provincia-data';
 
 
@@ -75,8 +73,5 @@ addNewProvincia (provincia : Provincia) {
   return this.http.post<Provincia>(environment.base + 'api/province' , provincia)
 }
 
-getFatturaByCliente(client: any){
-  return this.http.get<FatturaData>(environment.base + 'api/fatture/cliente/' +client.id + '?page=0&size=20&sort=id,DESC')
-}
 
 }
