@@ -7,6 +7,7 @@ import { Fattura } from '../classes/fattura';
 import { Provincia } from '../classes/provincia';
 import { ClientData } from '../interfaces/client-data';
 import { ComuniData } from '../interfaces/comuni-data';
+import { FatturaData } from '../interfaces/fattura-data';
 import { ProvinciaData } from '../interfaces/provincia-data';
 
 
@@ -75,7 +76,7 @@ addNewProvincia (provincia : Provincia) {
 }
 
 getFatturaByCliente(client: any){
-  return this.http.get<Fattura>(environment.base + 'api/fatture/cliente/' +client.id + '?page=0&size=20&sort=id,DESC')
+  return this.http.get<FatturaData>(environment.base + 'api/fatture/cliente/' +client.id + '?page=0&size=20&sort=id,DESC')
 }
 
 }
